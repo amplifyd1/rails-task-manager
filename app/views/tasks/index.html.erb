@@ -1,0 +1,12 @@
+<h1>My Tasks</h1>
+<% @tasks.each do |task| %>
+ <p> <%= link_to task.title, show_path(task) %>: <%= task.details %> <%= task.completed %></p>
+<% end %>
+<%= link_to 'Create', task_new_path %>
+<!-- <form action="">
+  <input type="radio" name="gender" value="male"> Male<br>
+  <input type="radio" name="gender" value="female"> Female<br>
+  <input type="radio" name="gender" value="other"> Other
+</form>
+
+ -->
